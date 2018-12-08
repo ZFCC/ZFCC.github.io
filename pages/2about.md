@@ -30,16 +30,17 @@ icon: glyphicon-heart
 
 ### 关于本站   
 
-这个博客主要用于记录一下后盾路上的风景。
-2018-12-8：个人博客上线，模板正在组件中。。。。。。
+**学习路上的风景：**
+
+2018-12-8：个人博客上线，模板正在组建中。。。。。。
 ---
 
 #### 友情链接
 
-[血淋淋的加速]((https://me.csdn.net/qq_31822385) \| [Spring](https://start.spring.io/) \| [Reverland](http://reverland.org/) \| [ZhiLi](http://lizhipower.github.io/) \| [Simmer](http://simmer-jun.github.io/) \| [awthink](http://awthink.net/) \| [Aralic](http://aralic.github.io/)
+[血淋淋的加速](https://me.csdn.net/qq_31822385) \| [Spring](https://start.spring.io/) \|[Spring Cloud](http://blog.didispace.com/Spring-Cloud%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)\|[SpringFprAll](https://github.com/SpringForAll)
 
 Comment below to exchange link with me.  
 
 ---
 
-只要有空一定会更新的！
+#It will be updated when I have time.#
