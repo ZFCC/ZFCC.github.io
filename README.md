@@ -15,19 +15,6 @@ You can visit [here](https://zfcc.github.io/ZFC/) to see this blog.
 
 <!--
 
-## 被引用信息
-
-使用了我的模板并写明来源的人：   
-
-* [dreamholy](http://dreamholy.github.io/)
-
-没有注明来源的人：
-
-* [yangshuailing](http://yangshuailing.github.io/com/)
-* [huapu728](http://huapu728.github.io/)
-* [greatbuger](http://greatbuger.github.io/) 
-
-
 -->
 
 
