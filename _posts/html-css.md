@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "make a Web Pages like Zhihu"
-date:   2015-03-21 15:14:54
+date:   2018-12-10 15:14:54
 categories: Bootstrap
-excerpt: 
+excerpt: zz
 ---
 
 * content
