@@ -15,14 +15,13 @@ icon: glyphicon-heart
 ----
 
 > 2018年我步入社会，希望做一个后端开发工程师，目标架构师。   
-
+>
 >2018.7毕业于重庆邮电大学软件工程专业，目前就职于苏宁易购。
 >主要兴趣集中在java后端开发，后端的概念深入我心。将更多的业务逻辑放在实践中，这很有趣。同时，将自己构想的内容实现出来，这种感觉很愉快,目前正在探索Spring Cloud微服务架构（还是菜鸟），有兴趣的可以加入我。   
-
->热爱美好的事物，热爱旅游，热爱运动。
-
->学习是一个非常愉快的过程。共同加油！   
 >
+>热爱美好的事物，热爱旅游，热爱运动。
+>
+>学习是一个非常愉快的过程。共同加油！
 ---
 
 联系我
@@ -44,7 +43,7 @@ icon: glyphicon-heart
 
 #### 友情链接
 
-[血淋淋的加速](https://me.csdn.net/qq_31822385) \|  [Spring](https://start.spring.io/) \|  [Spring Cloud](http://blog.didispace.com/Spring-Cloud%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)\| [SpringFprAll](https://github.com/SpringForAll)
+[LessOrMore ](http://www.hifreud.com/LessOrMore/)\| [血淋淋的加速](https://me.csdn.net/qq_31822385) \|  [Spring](https://start.spring.io/) \|  [SpringFprAll](https://github.com/SpringForAll)
 
 ---
 
