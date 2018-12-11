@@ -3,12 +3,14 @@ name: ZFC
 email: fuchzhao@163.com
 author: zhaofuchao
 url: https://ZFCC.github.io
-resume_site: http://www.hifreud.com/Resume.io/
-github: https://github.com/luoyan35714/
+##这里原作者加了 自己个人主页链接
+resume_site: ""
+github: https://github.com/ZFCC
+
 baseurl: ""
 description: Nothing is impossible!
 meta_description: 赵福超;个人博客;
-motto: It's our wits that make us men.
+motto: Nothing is impossible!
 banner: 一切皆有可能。
 
 #permalink: /:categories/:year/:month/:day/:title/
