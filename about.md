@@ -44,7 +44,7 @@ icon: glyphicon-heart
 
 #### 友情链接
 
-[LessOrMore ](http://www.hifreud.com/LessOrMore/)\| [血淋淋的加速](https://me.csdn.net/qq_31822385) \|  [Spring](https://start.spring.io/) \|  [SpringFprAll](https://github.com/SpringForAll)
+[LessOrMore ](http://www.hifreud.com/LessOrMore/)\| [血淋淋的加速](https://me.csdn.net/qq_31822385) \|  [Spring](https://start.spring.io/) \|  [SpringForAll](https://github.com/SpringForAll)
 
 ---
 
