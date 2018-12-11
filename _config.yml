@@ -1,25 +1,26 @@
 # Site settings
-title: zfc
+name: ZFC
 email: fuchzhao@163.com
-description: ZFC's Blog
-# > # this means to ignore newlines until "baseurl:"
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
-
-# baseurl: "" # the subpath of your site, e.g. /blog/
+author: zhaofuchao
+url: https://ZFCC.github.io
+resume_site: http://www.hifreud.com/Resume.io/
+github: https://github.com/luoyan35714/
 baseurl: ""
-url: "https://ZFCC.github.io"
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
-# twitter_username: jekyllrb
-github_username:  ZFCC
+description: Nothing is impossible!
+meta_description: 赵福超;个人博客;
+motto: It's our wits that make us men.
+banner: 一切皆有可能。
+
+#permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
+paginate: 10
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: ZFCC
 
 # Build settings
 markdown: kramdown
 
-# highlight
-# 本地用rouge, github上用pygments
-# highlighter: pygments
-# highlighter: rouge
-# highlighter: false
+baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
+
