@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  永久放弃评论功能
-date:   2017-07-24 00:00:00 +0800
+date:   2018-12-08 00:00:00 +0800
 categories: document
 tag: 教程
 ---
