@@ -12,16 +12,22 @@ tag: Spring Cloud
 
 
 
-# Spring Cloud 那些事 #
-##Spring Cloud 学习笔记一intiallije idea中配置spring-boot并启动
-###一、基本配置
-####1.1项目生成
+# Spring Cloud 那些事 
+
+## Spring Cloud 学习笔记一intiallije idea中配置spring-boot并启动
+
+### 一、基本配置
+
+#### 1.1项目生成
+
 首先给大家介绍一个项目构建的网站：https://start.spring.io/
 （个人亲身体会非常好用）
 附截图，选择你要使用的服务，最后Generate Project，生成项目包.zip文件，解压之后放在你的intellij idea工作目录下，打开idea，进行简单的配置。下面介绍怎么样配置。(此种方法可以省去，pom.xml文件的配置，直接生成)
 
 ![](https://i.imgur.com/xFQ3jt7.png)
-####1.2基本配置
+
+#### 1.2基本配置
+
 首先配置jdk，方法见截图
 
 ![](https://i.imgur.com/2yLyYkg.png)
