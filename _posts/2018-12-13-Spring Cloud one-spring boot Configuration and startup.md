@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Spring Cloud 学习笔记一intiallije idea中配置spring-boot并启动
+title: Spring Cloud 学习笔记一intiallije idea中配置spring-boot并启动
 date: 2018/12/13 19:24:40 
 categories: document
 tag: Spring Cloud
@@ -11,15 +11,7 @@ tag: Spring Cloud
 {:toc}
 
 
-
-
-# Spring Cloud 那些事 
-
-## Spring Cloud 学习笔记一intiallije idea中配置spring-boot并启动
-
-### 一、基本配置
-
-#### 1.1项目生成
+## 一、基本配置 
 
 首先给大家介绍一个项目构建的网站：https://start.spring.io/
 （个人亲身体会非常好用）
@@ -27,7 +19,7 @@ tag: Spring Cloud
 
 ![](https://i.imgur.com/xFQ3jt7.png)
 
-#### 1.2基本配置
+## 二、项目生成
 
 首先配置jdk，方法见截图
 
@@ -42,6 +34,7 @@ tag: Spring Cloud
  ![](https://i.imgur.com/iKoGdEL.png)
 
 趁着maven加载jar包的时候，写一下博客。。。。。。。。
+## 三、项目启动
 全部配置好以后，不报错的情况下，完成上面启动类的创建。
 启动方式：
 
