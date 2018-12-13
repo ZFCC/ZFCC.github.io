@@ -2,7 +2,6 @@
 layout: post
 title: 个人简介
 permalink: /about/
-icon: glyphicon-heart
 
 ---
 
