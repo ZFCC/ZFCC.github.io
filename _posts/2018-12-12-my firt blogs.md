@@ -2,7 +2,7 @@
 layout: post
 title:  我的第一个博客
 date:   2018/12/11 16:24:13 
-categories: document
+categories: summary
 tag: 教程
 ---
 

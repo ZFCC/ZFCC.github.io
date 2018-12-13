@@ -2,7 +2,7 @@
 layout: post
 title:  Today is my birthday, the blog is officially launched as a birthday present
 date:   2018/12/12 10:46:48  
-categories: document
+categories: summary
 tag: 寄语
 ---
 
