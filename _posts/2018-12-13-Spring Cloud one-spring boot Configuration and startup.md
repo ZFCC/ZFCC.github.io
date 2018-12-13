@@ -56,7 +56,9 @@ tag: Spring Cloud
 ![](https://i.imgur.com/bAUOW6T.png)
 
 解决方法就是，在@SpringBootApplication注解的后面加上如下代码：
+
 `exclude = DataSourceAutoConfiguration.class`
+
 注意导包哦！！，然后用maven工具clean一下，再次启动即可。
 
  ![](https://i.imgur.com/f3P60v1.png)
