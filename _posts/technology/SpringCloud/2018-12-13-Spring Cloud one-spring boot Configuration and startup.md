@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring Cloud 学习笔记一intiallije idea中配置spring-boot并启动
+title: Spring Cloud 学习笔记(一)一intiallije idea中配置spring-boot并启动
 date: 2018/12/13 19:24:40 
 categories: document
 tag: Spring Cloud
