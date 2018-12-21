@@ -2,7 +2,7 @@
 layout: post
 title:  mybatis-系列教程(一)-入门(quickstart)
 date:   2018/12/16 17:59:14 
-category : 技术文档
+category : document
 tag : mybatis
 ---
 
