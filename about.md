@@ -24,7 +24,6 @@ permalink: /about/
 >学习是一个非常愉快的过程。共同加油！
 
 ---
-
 联系我
 ---
 
@@ -34,6 +33,7 @@ permalink: /about/
 * 知乎：[孤舟单骑](https://www.zhihu.com/people/gu-zhou-dan-qi/activities)
 
 ---
+
 
 关于本站  
 ==
@@ -46,6 +46,8 @@ permalink: /about/
 >2018-12-12:立一个flag，以后有时间就更新个人博客
 >
 >2018-12-13:Spring Cloud 学习笔记一intiallije idea中配置spring-boot并启动
+>
+> 2018-12-21 Design Patterns-Adapter Pattern
 
 #### 友情链接
 
