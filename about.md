@@ -11,8 +11,8 @@ permalink: /about/
 
 
 
-关于我
-----
+# 关于我
+---
 
 > 2018年我步入社会，希望做一个后端开发工程师，目标架构师。   
 >
@@ -24,8 +24,9 @@ permalink: /about/
 >学习是一个非常愉快的过程。共同加油！
 
 ---
-联系我
----
+
+# 联系我
+----
 
 * email：[fuchzhao@163.com](mailto:{{ site.email }})
 * QQ：719815832
@@ -35,10 +36,9 @@ permalink: /about/
 ---
 
 
-关于本站  
-==
-学习路上的风景：
---
+# 关于本站  
+## 学习路上的风景：
+---
 >2018-12-08：个人博客上线，正在加速搭建环境中。。。。。。
 >
 >2018-12-11：更换模板，正在努力构建模板中。。。。。。
@@ -49,7 +49,7 @@ permalink: /about/
 >
 > 2018-12-21 Design Patterns-Adapter Pattern
 
-#### 友情链接
+#友情链接
 
 [LessOrMore ](http://www.hifreud.com/LessOrMore/)\| [血淋淋的加速](https://me.csdn.net/qq_31822385) \|  [Spring](https://start.spring.io/) \|  [SpringForAll](https://github.com/SpringForAll)
 
