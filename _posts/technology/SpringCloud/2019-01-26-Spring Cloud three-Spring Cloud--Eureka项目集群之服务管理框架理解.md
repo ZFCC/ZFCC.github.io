@@ -11,7 +11,7 @@ tag: Spring Cloud
 {:toc}
 
 
-#1Spring Cloud--Eureka项目集群之服务管理框架理解
+# 1.Spring Cloud--Eureka项目集群之服务管理框架理解
 
 紧跟上一篇博客，这里采用的也是上一篇博客的代码作为分析：《Spring Cloud 那些事之Spring Cloud 学习笔记二：SpringCloud之Eureka-Service集群搭建》。我们在搭建起了简单的单机模式Eureka项目之后，如果Eureka服务器和客户端不能满足高并发访问，项目需要集群部署，也可以利用Eureka做到这一点。我们这里创建两个Eureka服务器端，两个Eureka客户端(作为服务提供者)，一个Eureka客户端(作为服务调用者)，如图：
 
@@ -24,7 +24,7 @@ tag: Spring Cloud
 127.0.0.1 peer1 peer2
 ```
 
-#2.创建两个Eureka服务器端
+# 2.创建两个Eureka服务器端
 
 找到我们上一篇博客编写的EurekaServiceA和EurekaServiceB项目，修改application.yml文件，配置如下：
 ```
@@ -101,7 +101,7 @@ public class EurekaServiceB {
 
 ![](https://i.imgur.com/kglKxD1.png)
 
-# 3，创建两个Eureka客户端(提供者)
+# 3.创建两个Eureka客户端(提供者)
 
 找到我们上一篇博客编写的EurekaProviderA再创建一个EurekaProviderB.java文件，代码如下：
 
@@ -311,5 +311,5 @@ public class applicationConsumerController {
 [https://github.com/ZFCC/springCloud1.0.3](https://github.com/ZFCC/springCloud1.0.3)
 
 精彩内容，请见下回分解
-## 1.创建Eureka服务器端
+
 
