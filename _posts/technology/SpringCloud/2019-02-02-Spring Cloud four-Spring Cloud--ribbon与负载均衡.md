@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring Cloud 学习笔记（四）一Spring Cloud--Ribbon与负载均衡解
+title: Spring Cloud 学习笔记（四）一Spring Cloud--Ribbon与负载均衡
 date: 2019/2/2 16:39:26  
 categories: document
 tag: Spring Cloud
