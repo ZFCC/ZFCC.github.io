@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring Cloud 学习笔记（三）一Spring Cloud--Ribbon与负载均衡解
+title: Spring Cloud 学习笔记（四）一Spring Cloud--Ribbon与负载均衡解
 date: 2019/2/2 16:39:26  
 categories: document
 tag: Spring Cloud
@@ -39,7 +39,7 @@ Ribbon是一个在云服务中久经沙场的客户端IPC库，它提供以下�
     </dependency>
 ```
 
-# 1.2Ribbon所包含的模块
+## 1.2Ribbon所包含的模块
 
 - ribbon：在其他Ribbon模块和Hystrix上集成负载均衡、容错、缓存/批处理的api
 - ribbon-loadbalancer：可以独立或与其他模块一起使用的负载均衡器的api
@@ -50,7 +50,7 @@ Ribbon是一个在云服务中久经沙场的客户端IPC库，它提供以下�
 - ribbon-core：客户端配置api和其他共享api
 
 
-# 1.3负载均衡器的三大子模块
+## 1.3负载均衡器的三大子模块
 
 -     Rule：确定从列表返回哪个服务的逻辑组件
 -     Ping：在后台运行的组件以确保服务的活跃度
