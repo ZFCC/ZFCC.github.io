@@ -38,7 +38,8 @@ Ribbon是一个在云服务中久经沙场的客户端IPC库，它提供以下�
         <version>2.2.2</version>
     </dependency>
 ```
-# 1.2 Ribbon所包含的模块
+
+# 1.2Ribbon所包含的模块
 
 - ribbon：在其他Ribbon模块和Hystrix上集成负载均衡、容错、缓存/批处理的api
 - ribbon-loadbalancer：可以独立或与其他模块一起使用的负载均衡器的api
@@ -49,20 +50,18 @@ Ribbon是一个在云服务中久经沙场的客户端IPC库，它提供以下�
 - ribbon-core：客户端配置api和其他共享api
 
 
-# 1.3 负载均衡器的三大子模块
+# 1.3负载均衡器的三大子模块
 
 -     Rule：确定从列表返回哪个服务的逻辑组件
 -     Ping：在后台运行的组件以确保服务的活跃度
 -     ServerList：这可以是静态的或动态的。如果它是动态的（由DynamicServerListLoadBalancer使用），后台线程将在特定的时间间隔刷新和过滤列表
-
-
 
 # 2.Ribbon负载均衡入门案例
 
 前几章，我们搭建起了高并发的Eureka服务器和客户端，我们在高并发的Eureka服务器和客户端之间加上我们这节说要讲述的Ribbon负载均衡，项目需要集群部署，也可以利用Eureka和Ribbon做到这一点。我们这里创建两个Eureka服务器端（这里两个Eureka可以理解为一个注册中心，对于外界来说只是一个统一的注册服务中心），两个Eureka客户端(作为服务提供者)，一个Eureka客户端(作为服务调用者)，增加一个Ribbon负载均衡。如图：Ribbon可以自动从Eureka服务中心获取服务的提供者地址列表，并基于负载均衡算法选择其中一个服务提供者实例。
 ![](https://i.imgur.com/AtB0ES7.png)
 
-## 2.1 添加依赖和文件配置
+## 2.1添加依赖和文件配置
 
 首先在这几个项目的pom.xml文件中添加Ribbon的依赖，代码如下
 
@@ -134,7 +133,7 @@ public class applicationConsumerController {
 
 到此为止，我们的demo已经建好。可以启动这些高并发的Eureka服务器和客户端项目，来测试我们的demo是否成功。
 
-## 2.3 Demo测试部分
+## 2.3Demo测试部分
 分别启动EurekaServiceA和EurekaServiceB，然后启动负载均衡服务器，EurekaServiceB，启动完成和后我们在浏览器界面输入http://localhost:8810/或者http://localhost:8811/进入Eureka管理界面，如下图，会发现除了eureka-server-A:8810和eureka-server-B:8811相互注册意外，还有ribbon-loadBalance:8888的成功注册。
 
 ![](https://i.imgur.com/jryiNgD.png)
