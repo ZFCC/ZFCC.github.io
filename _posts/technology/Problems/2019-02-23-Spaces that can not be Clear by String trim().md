@@ -53,7 +53,7 @@ public class TestMain {
 
         //解决方式：把全角空格转为半角空格在利用trim函数进行清除。
         String str = fullStr.replaceAll("　"," ");
-        //或者fullStr.replace("\\u00A0","");
+        //或者fullStr.replaceAll("\\u00A0","");
         System.out.println(str.trim()+"全角转为半角后的长度："+str.trim().length());
     }
 }
