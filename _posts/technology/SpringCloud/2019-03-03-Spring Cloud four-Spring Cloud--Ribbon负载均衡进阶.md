@@ -49,7 +49,7 @@ Ribbon内置了一些负载均衡，下面就让我们看一个表格，来详�
 
 ![](https://i.imgur.com/FYjkbom.png)
 
-## 3 负载均衡策略实战
+# 3 负载均衡策略实战
 
 ## 3.1 默认的RoundRobinRule轮询负载均衡策略：
 
