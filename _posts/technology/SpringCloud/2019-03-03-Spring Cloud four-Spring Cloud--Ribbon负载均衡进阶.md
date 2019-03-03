@@ -164,7 +164,7 @@ public class MyRule implements IRule {
 ![](https://i.imgur.com/t38l1WT.png)
 
 
-最后结束前，把所有的配置都加进来，就是一个比较健全的ribbon负载均衡的配置方式，如下图：
+**最后结束前，把所有的配置都加进来，就是一个比较健全的ribbon负载均衡的配置方式，如下图：**
 
 ![](https://i.imgur.com/N8MXnL3.png)
 
