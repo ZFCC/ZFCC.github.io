@@ -42,13 +42,13 @@ permalink: /about/
 ## 学习路上的风景：
 
 ---
->2018-12-08：个人博客上线，正在加速搭建环境中。。。。。。
+>2018-12-08： 个人博客上线，正在加速搭建环境中。。。。。。
 >
->2018-12-11：更换模板，正在努力构建模板中。。。。。。
+>2018-12-11： 更换模板，正在努力构建模板中。。。。。。
 >
->2018-12-12: 立一个flag，以后有时间就更新个人博客
+>2018-12-12:  立一个flag，以后有时间就更新个人博客
 >
->2018-12-13: Spring Cloud 学习笔记一intiallije idea中配置spring-boot并启动
+>2018-12-13:  Spring Cloud 学习笔记一intiallije idea中配置spring-boot并启动
 >
 >2018-12-13： Spring Cloud 学习笔记一SpringCloud之Eureka-Service集群搭建
 >
@@ -59,6 +59,8 @@ permalink: /about/
 >2019-01-26： Spring Cloud 学习笔记一Spring Cloud--Eureka项目集群之服务管理框架理解
 > 
 >2019-02-02： Spring Cloud 学习笔记一Spring Cloud--Ribbon与负载均衡解
+> 
+>2019-03-30： 个人博客域名绑定，域名为：zfclwj.xyz
 
 # 友情链接
 
