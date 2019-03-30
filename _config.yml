@@ -13,6 +13,7 @@ meta_description: 赵福超;个人博客;
 motto: Nothing is impossible!
 banner: 一切皆有可能。
 
+imgurl: "http://i.imgur.com/"
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
 paginate: 10
