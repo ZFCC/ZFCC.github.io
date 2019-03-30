@@ -43,27 +43,27 @@ tag: Spring Cloud
 
 控制台会有spring的大字样，说实话很漂亮！！！
 
- ![](https://i.imgur.com/zcBqhfP.png)
+ ![](/styles/images/spring-cloud/1/启动成功.png)
 
 启动如果控制台报错Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could，别慌张，是因为你在1.1节构架项目的时候添加了数据库管理的服务，因为项目还没有配置数据的信息，所以会出现这种错误，如下图，
 
-![](https://i.imgur.com/bAUOW6T.png)
+![](/styles/images/spring-cloud/1/报错一.png)
 
 解决方法就是，在@SpringBootApplication注解的后面加上如下代码：
 
 `exclude = DataSourceAutoConfiguration.class`
 
-注意导包哦！！，然后用maven工具clean一下，再次启动即可。
+![](/styles/images/spring-cloud/1/报错修改.png)
 
- ![](https://i.imgur.com/f3P60v1.png)
+注意导包哦！！，然后用maven工具clean一下，再次启动即可。
 
 启动成功后，控制台打印日志信息如下图：可以看到spring boot启动后的魅力标志
 
- ![](https://i.imgur.com/GguAvyk.png)
+ ![](/styles/images/spring-cloud/1/启动成功.png)
 
 启动成功后，可以去浏览器输入http://localhost:8080/， 因为我们尚未搭建前端组件，所以暂时是sping boot提供的报错页面，
 
- ![](https://i.imgur.com/RRsUhK0.png)
+  ![](/styles/images/spring-cloud/1/lco.png)
 
 我们的第一个Spring Boot项目也完成了！
 
