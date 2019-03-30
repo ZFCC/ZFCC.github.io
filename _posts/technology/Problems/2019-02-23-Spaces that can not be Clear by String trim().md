@@ -15,7 +15,7 @@ tag: 踩过的坑
 
 去网上查了一下，发现String.trim()的方法不能清除全角空格，只能清除半角空格，什么是全角和半角：见下图，搜狗输入法中默认是半角输入，设置为全角输入的方式，再输入的字符就是全角，这时输入的空格 Unicode码是“\u00A0”, 不能被trim清除！
 
-![](https://i.imgur.com/O0xyJr3.png)
+ ![](/styles/images/problem/strim/1.png)
 
 
 下面是写个main方法实际操作测试trim函数对全角空格的无发清除。
@@ -36,7 +36,7 @@ public class TestMain {
 //123456　全角长度：7
 ```
 
-![](https://i.imgur.com/GF9ZbVC.png)
+ ![](/styles/images/problem/strim/2.png)
 
 上图中可以看出 trim函数确实不能清除全角空格！
 
@@ -64,4 +64,4 @@ public class TestMain {
 //    123456全角转为半角后的长度：6
 ```
 
-![](https://i.imgur.com/WtRvRKX.png)
+ ![](/styles/images/problem/strim/3.png)
