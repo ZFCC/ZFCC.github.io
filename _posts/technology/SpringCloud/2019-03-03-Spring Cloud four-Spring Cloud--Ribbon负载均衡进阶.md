@@ -29,7 +29,7 @@ LoadBalancerClient在初始化的时候，会通过ILoadBalance（BaseLoadBalanc
 常见的策略有：RandomRule表示随机策略、RoundRobinRule表示轮询策略、WeightedResponseTimeRule表示加权策略、BestAvailableRule表示请求数最少策略
 如下图负载均衡的继承结构：
 
-![](https://i.imgur.com/acdzHBo.png)
+![](/styles/images/spring-cloud/4/图片1.png)
 
 ## 2.1 Ribbon负载均衡策略
 Ribbon内置了一些负载均衡，下面就让我们看一个表格，来详细了解Ribbon内置的负载均衡都有哪些，并且每个负载均衡都应该适用于哪种场景。
@@ -47,7 +47,7 @@ Ribbon内置了一些负载均衡，下面就让我们看一个表格，来详�
 ## 2.2 RandomRule随机策略源码
 随机策略就是从服务器中随机选择一个服务器，RandomRule的实现主要代码如下：
 
-![](https://i.imgur.com/FYjkbom.png)
+![](/styles/images/spring-cloud/4/微信截图2.png)
 
 # 3 负载均衡策略实战
 
@@ -55,13 +55,13 @@ Ribbon内置了一些负载均衡，下面就让我们看一个表格，来详�
 
 在这几个项目的pom.xml文件中添加Ribbon的依赖，然后在消费者的启动类中添加负载均衡代码，通过使用声明Bean并且通过注解@LoadBalanced开启负载均衡。Ribbon负载均衡默认的策略时轮询策略，开启之后无需增加任何配置即可使用轮询策略。代码如下：
 
-![](https://i.imgur.com/sQVfSoD.png)
+![](/styles/images/spring-cloud/4/图片2.png)
 
-![](https://i.imgur.com/96uJdH7.png)
+![](/styles/images/spring-cloud/4/图片3.png)
 
 启动系统，我们多次刷新请求，可以看到8080和8081这两个服务器实例，被轮询调用。
 
-![](https://i.imgur.com/wColQtA.png)
+![](/styles/images/spring-cloud/4/7.png)
 
 ## 3.2 负载均衡策略的配置
 实际应用中多采用application.yml和application.properties配置的方式，这里就不在介绍代码或者注解的方式进行负载均衡的配置。eureka-provider:为提供消费的服务器端的系统实例名称，ribbon：负载均衡，NFLoadBalancerRuleClassName为需要配置的负载均衡策略的名称，然后就是负载均衡所在的路径。如下代码配置的是随机策略：
@@ -72,7 +72,7 @@ eureka-provider:
         NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 ```
 配置好以后重新启动下客户端系统，我们多次刷新请求，可以看到8080和8081这两个服务器实例被随机命中，如下图：
-![](https://i.imgur.com/0PAToFt.png)
+![](/styles/images/spring-cloud/4/图片4.png)
 
 ## 3.3 Ribbon的饥饿加载(eager-load)模式 
 **问题：**Spring Cloud的Ribbon或Feign来实现服务调用的时候，如果我们的机器或网络环境等原因不是很好的话，有时候会发现这样一个问题：我们服务消费方调用服务提供方接口的时候，第一次请求经常会超时，而之后的调用就没有问题了。
@@ -90,10 +90,10 @@ ribbon:
 不配置饥饿加载，我们多次刷新请求，可以看出第一次调用服务器请求耗时是：7268s
 如下图：这种个情况下如果我们的机器或网络环境等原因不是很好的话，第一次请求可能会导致超时。
 
-![](https://i.imgur.com/iuN5X6g.png)
+![](/styles/images/spring-cloud/4/图片5.png)
 
 配置好饥饿加载，我们在重启一下客户端系统，我们多次刷新请求，可以看到第一期调用服务器请求耗时是：81s，有些时候会是200-300s，但是也远低于不配置饥饿加载时第一次请求耗时，所以配置饥饿加载可以避免第一次请求时因网络或者其他原因导致加载超时。
-![](https://i.imgur.com/2lCAPa1.png)
+![](/styles/images/spring-cloud/4/图片6.png)
 
 ## 3.4 Ribbon的超时重试配置
 如果一个实例发生了故障而该情况还没有被服务治理机制及时的发现和摘除，这时候客户端访问该节点的时候自然会失败。
@@ -157,16 +157,16 @@ public class MyRule implements IRule {
 ```
 代码开发完以后我们在.yml文件当中把负载均衡策略的配置改成我们自己的策略，如下图：
 
-![](https://i.imgur.com/liphIRM.png)
+![](/styles/images/spring-cloud/4/图7.png)
 
 这是重启一下客户端系统，我们多次刷新请求，可以看到命中8080的概率接近20% 命中8081的概率是80%
 为了验证，我们请求了30次，8080被命中的概率是6次基本符合我们设定的策略。如下图:
-![](https://i.imgur.com/t38l1WT.png)
+![](/styles/images/spring-cloud/4/图片7.png)
 
 
 **最后结束前，把所有的配置都加进来，就是一个比较健全的ribbon负载均衡的配置方式，如下图：**
 
-![](https://i.imgur.com/N8MXnL3.png)
+![](/styles/images/spring-cloud/4/图片8.png)
 
 ----------
 
