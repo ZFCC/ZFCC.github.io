@@ -15,7 +15,7 @@ tag: Spring Cloud
 
 紧跟上一篇博客，这里采用的也是上一篇博客的代码作为分析：《Spring Cloud 那些事之Spring Cloud 学习笔记二：SpringCloud之Eureka-Service集群搭建》。我们在搭建起了简单的单机模式Eureka项目之后，如果Eureka服务器和客户端不能满足高并发访问，项目需要集群部署，也可以利用Eureka做到这一点。我们这里创建两个Eureka服务器端，两个Eureka客户端(作为服务提供者)，一个Eureka客户端(作为服务调用者)，如图：
 
-![](https://i.imgur.com/BVzzYr5.png)
+ ![](/styles/images/spring-cloud/3/1.png)
 
 通过运行多个实例并让它们彼此注册，Eureka可以变得更有弹性和可用性。实际上，这是默认行为，所以需要做的就是将一个有效的serviceUrl添加到对等点。我们可以将多个对等点添加到一个系统中，只要它们之间至少有一条边连接，它们就会同步这些注册。如果对等体在物理上是分开的(在数据中心或多个数据中心之间)，那么系统就可以在原则上生存下来，以避免“大脑分裂”。由于资源限制，这里让服务运行在同一个主机上，通过修改hosts文件配置，模仿两个不同的主机。
 
@@ -97,9 +97,9 @@ public class EurekaServiceB {
 
 之后分别运行EurekaServiceA和EurekaServiceB的main()方法，启动项目，项目EurekaServiceA启动过程中会报错，但是不影响我们启动项目，报错的原因是eureka-server-A会将自己的服务注册到eureka-server-B，但是eureka-server-B还未启动，我们可以在浏览器访问http://localhost:8810，能够进入Eureka的后台管理界面，说明项目已经启动成功。eureka-server-B项目是不会报错的，它能成功将自己注册到eureka-server-A。最后访问http://localhost:8811我们两个管理后台都能看见注册的服务信息：
 
-![](https://i.imgur.com/nB9RLad.png)
+ ![](/styles/images/spring-cloud/3/2.png)
 
-![](https://i.imgur.com/kglKxD1.png)
+ ![](/styles/images/spring-cloud/3/3.png)
 
 # 3.创建两个Eureka客户端(提供者)
 
@@ -188,15 +188,15 @@ public class ApplicationProviderController {
 
 运行EurekaProviderA和EurekaProviderB类的main()方法，启动两个项目；项目成功启动之后，我们在浏览器分别访问http://localhost:8080/search/A和http://localhost:8081/search/B，能够得到对应的响应结果，如下：
 
-![](https://i.imgur.com/LOgfudf.png)
+ ![](/styles/images/spring-cloud/3/4.png)
 
-![](https://i.imgur.com/iizsSO4.png)
+ ![](/styles/images/spring-cloud/3/5.png)
 
 然后访问我们的Eureka服务器端，http://localhost:8810或者http://localhost:8811，也能够看到服务被注册到了服务器端。
 
-![](https://i.imgur.com/szvZGDV.png)
+ ![](/styles/images/spring-cloud/3/6.png)
 
-![](https://i.imgur.com/RAdJhRW.png)
+ ![](/styles/images/spring-cloud/3/7.png)
 
 # 4.创建一个Eureka客户端(服务调用者)
 
@@ -294,15 +294,15 @@ public class applicationConsumerController {
 ```
 服务消费者需要的配置就完成了，然后我们运行EurekaConsumer类的main()方法，成功启动之后，访问http://localhost:8888/consumer/A和http://localhost:8888/consumer/B可以看到，我们的服务调用者是依次去调用了8080和8081的服务。
 
-![](https://i.imgur.com/fMj9SM0.png)
+ ![](/styles/images/spring-cloud/3/8.png)
 
-![](https://i.imgur.com/qBg1iMa.png)
+ ![](/styles/images/spring-cloud/3/9.png)
 
 这时刷新eureka-service-A和eureka-service-B页面可以发现也有变化
 
-![](https://i.imgur.com/dgWuv6P.png)
+ ![](/styles/images/spring-cloud/3/10.png)
 
-![](https://i.imgur.com/ZuOp2hh.png)
+ ![](/styles/images/spring-cloud/3/11.png)
 
 至此搭建完成！！！
 完整代码地址如下：（三个项目分别对应三个服务，1.0.1对应EurekaService；1.0.2对应EurekaProvider；1.0.3对应EurekaConsumer）
