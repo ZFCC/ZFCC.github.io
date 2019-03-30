@@ -215,7 +215,7 @@ public class MethodFactoryDemo {
 
 在抽象工厂模式中，有一个产品族的概念：所谓的产品族，是指位于不同产品等级结构中功能相关联的产品组成的家族。抽象工厂模式所提供的一系列产品就组成一个产品族；而工厂方法提供的一系列产品称为一个等级结构。我们依然拿生产汽车的例子来说明他们之间的区别。
 
-![](https://i.imgur.com/iANCjnW.png)
+![](/styles/images/design-atterns/factory-pattern/AF.png)
 
 在上面的类图中，Car和SUV是两个不同的汽车产品等级结构，而奔驰，宝马，奥迪则是是三个不同的产品族。具体来说，奔驰car是和奥迪宝马car同属于一个产品等级结构，奔驰SUV，宝马SUV，奥迪SUV是属于同一个产品结构；而奔驰car和奔驰SUV是同一个产品族，奥迪car和奥迪SUV属于同一个产品族，宝马car和宝马SUV属于同一个产品族。
 

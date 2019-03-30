@@ -51,7 +51,7 @@ tag: 设计模式
 以只能播放mp3文件的播放器转为能播放mp4或vlc文件为例（虽然实际生活中我们并不需要这样的转换）
 类适配器结构图：
 
-![](https://i.imgur.com/hjzFIhP.png)
+![](/styles/images/design-atterns/adapter/classAdapter.png)
 
 1.首先有MediaMP3Player这样一个接口，方法为play(String audioType, String fileName)，MediaMP3Player接口功能只能播放MP3文件，如下代码：
 ```
@@ -132,7 +132,7 @@ public class AdapterPatternMainDemo {
 **案例：** 我们任然以MP3文件播放器转其他MP4或vcl文件播放器为例：
 对象适配器结构图：
 
-![](https://i.imgur.com/9GEkznq.png)
+![](/styles/images/design-atterns/adapter/ObjectAdapter.png)
 
 1.首先我们有接口MediaMP3Player方法play(String audioType, String fileName)，只能实现播放MP3的功能，代码如下：。
 ```
@@ -262,7 +262,7 @@ public class AdapterPatternMainDemo {
 
 **案例：** 一个媒体播放器支持很多种文件的播放，但是我们现在只想实现一个只支持RMVB的播放器。
 接口适配器结构图：
-![](https://i.imgur.com/kIdkkPD.png)
+![](/styles/images/design-atterns/adapter/接口适配器.png)
 
 1.有这一个播放器接口AdvancedMediaPlayer，支持RMVB,MP4,VCL文件格式播放，如代码：
 ```
