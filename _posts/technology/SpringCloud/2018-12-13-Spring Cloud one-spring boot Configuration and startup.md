@@ -23,22 +23,23 @@ tag: Spring Cloud
 
 首先配置jdk，方法见截图
 
-![](https://i.imgur.com/2yLyYkg.png)
+![](/styles/images/spring-cloud/1/搭建1.png)
 
 配置maven，见图
 
- ![](https://i.imgur.com/OecVk0y.png)
+![](/styles/images/spring-cloud/1/maven配置.png)
+
 
 然后给项目加载maven管理：见截图
 
- ![](https://i.imgur.com/iKoGdEL.png)
+![](/styles/images/spring-cloud/1/搭建2.png)
 
 趁着maven加载jar包的时候，写一下博客。。。。。。。。
 ## 三、项目启动
 全部配置好以后，不报错的情况下，完成上面启动类的创建。
 启动方式：
 
-![](https://i.imgur.com/ey1RsDs.png)
+![](/styles/images/spring-cloud/1/微信截图_20180825102004.png)
 
 控制台会有spring的大字样，说实话很漂亮！！！
 
