@@ -46,9 +46,9 @@ permalink: /about/
 >
 >2018-12-11： 更换模板，正在努力构建模板中。。。。。。
 >
->2018-12-12:  立一个flag，以后有时间就更新个人博客
+>2018-12-12： 立一个flag，以后有时间就更新个人博客
 >
->2018-12-13:  Spring Cloud 学习笔记一intiallije idea中配置spring-boot并启动
+>2018-12-13： Spring Cloud 学习笔记一intiallije idea中配置spring-boot并启动
 >
 >2018-12-13： Spring Cloud 学习笔记一SpringCloud之Eureka-Service集群搭建
 >
