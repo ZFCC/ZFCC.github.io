@@ -20,7 +20,7 @@ Ribbon默认为我们提供了很多的负载均衡算法，例如轮询、随�
 
 在Spring Cloud中，当Ribbon与Eureka配合使用时，Ribbon可自动从Eureka Server获取服务提供者地址列表，并基于负载均衡算法，选择其中一个服务提供者实例。下图展示了Ribbon与Eureka配合使用时的大致架构。
 
-![](https://i.imgur.com/WRQIF5t.png)
+![](/styles/images/spring-cloud/4/1.png)
 
 ## 1.1Ribbon特性
 
@@ -59,7 +59,7 @@ Ribbon是一个在云服务中久经沙场的客户端IPC库，它提供以下�
 # 2.Ribbon负载均衡入门案例
 
 前几章，我们搭建起了高并发的Eureka服务器和客户端，我们在高并发的Eureka服务器和客户端之间加上我们这节说要讲述的Ribbon负载均衡，项目需要集群部署，也可以利用Eureka和Ribbon做到这一点。我们这里创建两个Eureka服务器端（这里两个Eureka可以理解为一个注册中心，对于外界来说只是一个统一的注册服务中心），两个Eureka客户端(作为服务提供者)，一个Eureka客户端(作为服务调用者)，增加一个Ribbon负载均衡。如图：Ribbon可以自动从Eureka服务中心获取服务的提供者地址列表，并基于负载均衡算法选择其中一个服务提供者实例。
-![](https://i.imgur.com/AtB0ES7.png)
+![](/styles/images/spring-cloud/4/2.png)
 
 ## 2.1添加依赖和文件配置
 
@@ -73,7 +73,7 @@ Ribbon是一个在云服务中久经沙场的客户端IPC库，它提供以下�
 ```
 然后选择Eureka所在项目的工程配置包的配置文件中application.yml添加ribbon-loadBalance服务配置信息，具体如下：
 
-![](https://i.imgur.com/ErBCQWe.png)
+![](/styles/images/spring-cloud/4/3.png)
 
 第一行为:ribbon-loadBalance服务 名称。
 第二行为：该ribbon负载均衡服务 分别向两个eureka注册中心注册，同样由eureka统一管理，
@@ -136,19 +136,19 @@ public class applicationConsumerController {
 ## 2.3Demo测试部分
 分别启动EurekaServiceA和EurekaServiceB，然后启动负载均衡服务器，EurekaServiceB，启动完成和后我们在浏览器界面输入http://localhost:8810/或者http://localhost:8811/进入Eureka管理界面，如下图，会发现除了eureka-server-A:8810和eureka-server-B:8811相互注册意外，还有ribbon-loadBalance:8888的成功注册。
 
-![](https://i.imgur.com/jryiNgD.png)
+![](/styles/images/spring-cloud/4/4.png)
 
 然后我们启动EurekaProviderA和EurekaProviderB两个服务提供者，刷新Eureka管理界面http://localhost:8810/，这会发现这两个服务提供者eureka-provider:8081和eureka-provider:8080已经注册成功。如下图
 
-![](https://i.imgur.com/ZtsEnuD.png)
+![](/styles/images/spring-cloud/4/5.png)
 
 然后我们启动服务消费者EurekaConsumer，如下图启动成功
 
-![](https://i.imgur.com/qX4Vpqj.png)
+![](/styles/images/spring-cloud/4/6.png)
 
 最后在浏览器端输入链接：http://localhost:8887/add?a=1&b=2，并多次刷新请求，由于我们在applicationConsumerController的方法中已经实现了打印输出，我们会发现后台控制器中已经打印出一些信息，如下图：
 
-![](https://i.imgur.com/zLqgXgv.png)
+![](/styles/images/spring-cloud/4/7.png)
 
 我们可以看出我们每次用服务消费者EurekaConsumer调用消费者信息时，都是会调用得到不同的消费者返回的信息。这是因为Ribbon默认使用轮询的方式访问源服务，开篇已经提到，Ribbon的负载均衡策略有很多种，轮询策略只是其中的一种，后面章节我们会介绍其他的策略，并演示怎样自定义配置策略。
 
