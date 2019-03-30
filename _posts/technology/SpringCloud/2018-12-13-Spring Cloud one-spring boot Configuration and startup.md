@@ -17,7 +17,7 @@ tag: Spring Cloud
 （个人亲身体会非常好用）
 附截图，选择你要使用的服务，最后Generate Project，生成项目包.zip文件，解压之后放在你的intellij idea工作目录下，打开idea，进行简单的配置。下面介绍怎么样配置。(此种方法可以省去，pom.xml文件的配置，直接生成)
 
-![](https://i.imgur.com/xFQ3jt7.png)
+![](https://github.com/ZFCC/ZFCC.github.io/blob/master/styles/images/spring-cloud/1/spring.png)
 
 ## 二、项目生成
 
