@@ -33,6 +33,7 @@ Spring Cloud Open Feign地址：https://github.com/spring-cloud/spring-cloud-ope
 在Feign实际案例开始之前，我们先笔记（五）搭建的项目进行简单的重构。（之前的项目创建的太随意了，决定对项目重构，具体架构还是不变，在原有的基础之上加了一个父工程统一管理这三个子工程。）
 创建工程，springcloudhello
 工程结构如下图：
+
 ![](/styles/images/spring-cloud/feign/1.png)
 
 pom.xml文件为：
@@ -372,6 +373,7 @@ eureka:
 ## feign入门配置
 
 1.首选子项目spring-cloud-hello-eureka，即Eureka 注册中心不变和之前一模一样，如下图：
+
 ![](/styles/images/spring-cloud/feign/2.png)
 
 2.子项目spring-cloud-hello-provider，服务提供方，我们新建目录feign，并且新建接口类FeignService，以及其实现类FeignServiceImpl，目录结构如下图：
@@ -402,7 +404,9 @@ public class FeignServiceImpl implements FeignService {
 }
 ```
 3.子项目 spring-cloud-hello-comsumer的目录结构如下图：
+
 ![](/styles/images/spring-cloud/feign/4.png)
+
 新建目录feign 及接口类FeignConsumerService 并继承FeignService，代码如下：
 ```
 @FeignClient(value = "eureka-provider")
@@ -432,12 +436,15 @@ public class applicationConsumerController {
 然后启动spring-cloud-hello-provider工程中的EurekaProviderA和EurekaProviderB，
 最后启动spring-cloud-hello-comsumer 中的EurekaConsumer
 然后浏览器访问http://localhost:8811/ 如下图，所有服务均已注册到服务中心：
+
 ![](/styles/images/spring-cloud/feign/6.png)
 
-然后访问：http://localhost:8887/helloUser，发现能正常调用提供方服务器，结果如下图
+然后访问：http://localhost:8887/helloUser，发现能正常调用提供方服务器，结果如下图：
+
 ![](/styles/images/spring-cloud/feign/7.png)
 
 我们多次访问链接http://localhost:8887/helloUser，会发我们自定义的ribbon负载均衡策略也已经生效，8081和8080均被命中。
+
 ![](/styles/images/spring-cloud/feign/5.png)
 
 项目源码地址：[https://github.com/ZFCC/springcloudhello.git](https://github.com/ZFCC/springcloudhello.git)
