@@ -67,3 +67,5 @@ js代码，从后台获取的数据，for循环取出链接，定义一个videoU
 如图，图片和视频都能正常展示了
 
  ![](/styles/images/problem/angularjs_error/3.png)
+
+项目急着上线，顺利解决了bug，还好没有造成拖延！
