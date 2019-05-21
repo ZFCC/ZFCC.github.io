@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Error: interpolate:interr From AngularJS H5 video src url
+title: The Error: $interpolate:interr From AngularJS+H5 video src url展示视频时报错
 date: 2019/5/21 11:12:09 
 categories: problem
 tag: 踩过的坑
