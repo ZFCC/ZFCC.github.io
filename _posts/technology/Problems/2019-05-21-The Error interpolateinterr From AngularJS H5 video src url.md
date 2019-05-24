@@ -60,13 +60,13 @@ h5的代码,对视频链接增加一个videoUrl()进行处理：
 ```
 js代码，从后台获取的数据，for循环取出链接，定义一个videoUrl方法对取出链接进行处理，用$sce.trustAsResourceUrl(url)来对视频链接进行免安全检查处理，具体代码如图：
 
- ![](/styles/images/problem/angularjs_error/2.png)
+ ![](/styles/images/problem/angularjs_error/2.jpg)
 
 
 然后Ctrl+F5强刷一下页面，视频正确展示。
 
 如图，图片和视频都能正常展示了
 
- ![](/styles/images/problem/angularjs_error/3.png)
+ ![](/styles/images/problem/angularjs_error/3.jpg)
 
 项目急着上线，顺利解决了bug，还好没有造成拖延！
