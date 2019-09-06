@@ -61,16 +61,12 @@ permalink: /about/
 >2019-02-02： Spring Cloud 学习笔记一Spring Cloud--Ribbon与负载均衡解
 > 
 >2019-03-30： 个人博客域名绑定，域名为：zfclwj.xyz
-
 > 
 >2019-04-06： Spring Cloud 学习笔记一Spring Cloud--Feign
-
 > 
 >2019-05-21： 工作中遇到的问题及解决方式。
-
 > 
 >2019-09-06：  MySQL学习笔记-The index of B+Tree
-
 > 
 >2019-09-07：  MySQL学习笔记-The Transaction and Lock of MySQL
 
