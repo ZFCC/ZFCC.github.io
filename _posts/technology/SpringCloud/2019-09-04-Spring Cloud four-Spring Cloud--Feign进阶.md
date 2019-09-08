@@ -375,4 +375,73 @@ public class FeignRequestInterceptor implements RequestInterceptor {
 
 ## 3.4 Feign的文件上传
 
-最近工作比较忙，没时间更新博客了，不过**还是要抽时间学点东西，写写博客。3.4节待以后更新。
+
+最近工作比较忙，没时间更新博客了，趁着周末加班，工作不多，写一下。
+
+看了网上一些实现上传文件，有消费者系统的pom文件要加两个jar依赖，如下图：
+
+![](/styles/images/spring-cloud/feign/advance/7.png)
+
+图7
+
+亲自测了一下不加好像也可以，（我用的springCloud版本号是2.1.4.RELEASE），如果版本低的话不知道要不要加，可以自己测试一下
+
+开始代码，消费者系统controller如下，实现与页面的交互。
+```
+    @ApiOperation(value = "测试上传文件" ,  notes="测试上传文件")
+    @RequestMapping(value = "/fileUpload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String fileUpload( MultipartFile file){
+
+        System.out.println("file:"+file.toString());
+        return feignConsumerService.fileUpload(file);
+    }
+```
+FeignConsumerService类中，新加方法fileUpload，添加注解RequestMapping和MultipartSupportConfig内部类，实现文件上传服务。如下代码；
+
+```
+
+@FeignClient(value = "eureka-provider",configuration = FeignConsumerService.MultipartSupportConfig.class)
+public interface FeignConsumerService  extends FeignService {
+
+    @RequestMapping(value = "/fileUpload", method = RequestMethod.POST,produces = {MediaType.APPLICATION_JSON_UTF8_VALUE},consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String fileUpload(@RequestPart(value = "file")MultipartFile multipartFile);
+
+    @Configuration
+    class MultipartSupportConfig {
+        @Bean
+        public Encoder feignFormEncoder() {
+            return new SpringFormEncoder();
+        }
+    }
+
+}
+```
+
+服务提供端，FeignService接口中添加方法 handleFileUpload，提供文件上传服务，并且对接口进行实现。
+```
+@PostMapping(value = "/uploadFile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String handleFileUpload(@RequestPart(value = "file") MultipartFile file);
+
+
+//handleFileUpload 接口实现方法
+ @Override
+    public String handleFileUpload(MultipartFile file) {
+        return "调用成功返回的的文件名为："+file.getOriginalFilename();
+    }
+
+```
+启动eureka注册中心，启动服务端，启动消费端，
+
+访问：http://localhost:8887/swagger-ui.html#/
+
+我们用POST方法实现文件上传，如图8，选择文件，点击请求如图9，返回服务端接口实现类，返回的文件名。
+
+![](/styles/images/spring-cloud/feign/advance/8.png)
+
+图8
+
+![](/styles/images/spring-cloud/feign/advance/9.png)
+
+图9
+
+feign除了以上这些功能,还要其他的功能，如：feign调用传递token，feign文件下载等功能。以后有时间了慢慢更新，这次先到这里。
